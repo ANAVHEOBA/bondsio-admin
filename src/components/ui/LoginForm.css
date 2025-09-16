@@ -1,0 +1,134 @@
+/* src/components/ui/LoginForm.css - complete replacement */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    margin: 0 auto;              /* Center the form */
+    text-align: left;            /* Left-align form elements */
+  }
+  
+  .login-form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: #2D2D2D;
+    font-size: 1.1rem;
+    text-align: left;            /* Left-align labels */
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: 2px solid #D9D9D9;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background-color: white;
+    color: #2D2D2D;
+    transition: all 0.2s ease;
+  }
+  
+  .login-form input:focus {
+    outline: none;
+    border-color: #FF8C00;
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.25);
+    transform: translateY(-1px);
+  }
+  
+  .login-form input::placeholder {
+    color: #999;
+  }
+  
+  .login-form button {
+    padding: 1.25rem;
+    font-size: 1.1rem;
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-top: 0.5rem;
+    width: 100%;                 /* Full width button */
+  }
+  
+  .login-form button:hover:not(:disabled) {
+    background-color: #E67A00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+  }
+  
+  .login-form button:disabled {
+    background-color: #D3A46F;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .login-form button:active:not(:disabled) {
+    transform: translateY(0);
+  }
+  
+  /* Remember me and forgot password section */
+  .login-form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+  }
+  
+  .login-form-remember {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .login-form-remember input {
+    width: auto;
+    margin: 0;
+  }
+  
+  .login-form-forgot {
+    color: #FF8C00;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .login-form-forgot:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .login-form {
+      gap: 1.25rem;
+    }
+    
+    .login-form label {
+      font-size: 1rem;
+    }
+    
+    .login-form input {
+      padding: 0.875rem;
+      font-size: 1rem;
+    }
+    
+    .login-form button {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+    
+    .login-form-options {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+  }

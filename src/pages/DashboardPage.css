@@ -1,0 +1,22 @@
+/* src/pages/DashboardPage.css */
+
+.dashboard-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    min-height: 80vh;
+  }
+  
+  .dashboard-page h1 {
+    color: #2D2D2D;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .dashboard-page p {
+    color: #555;
+    font-size: 1.1rem;
+  }

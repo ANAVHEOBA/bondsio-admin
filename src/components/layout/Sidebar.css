@@ -1,0 +1,132 @@
+/* src/components/layout/Sidebar.css */
+
+/* src/components/layout/Sidebar.css */
+
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #3a3a3a 0%, #2a2a2a 100%);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    transition: transform 0.3s ease;
+  }
+  
+ 
+ /* LOGO SECTION */
+.sidebar-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #4a4a4a;
+    margin-bottom: 1.5rem;
+  }
+  
+  .sidebar-logo-img {
+    height: 40px; /* Perfect size for compact branding */
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+    filter: brightness(0) invert(1); /* Inverts dark logo to white */
+    border-radius: 8px;
+  }
+  
+  .sidebar-logo h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    color: #FF8C00;
+    letter-spacing: -0.5px;
+    text-align: center;
+  }
+  
+  /* NAVIGATION */
+  .sidebar-nav {
+    flex: 1;
+  }
+  
+  .sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  
+  .sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    color: #ccc;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  
+  .sidebar-link:hover,
+  .sidebar-link.active {
+    background-color: #FF8C00;
+    color: white;
+    transform: translateX(4px);
+  }
+  
+  .sidebar-link svg,
+  .sidebar-link span {
+    transition: all 0.2s ease;
+  }
+  
+  /* FOOTER / LOGOUT */
+  .sidebar-footer {
+    padding-top: 1.5rem;
+    border-top: 1px solid #4a4a4a;
+  }
+  
+  .sidebar-logout {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+  }
+  
+  .sidebar-logout:hover {
+    background-color: #FF8C00;
+    transform: translateX(2px);
+  }
+  
+  .sidebar-logout:active {
+    transform: scale(0.98);
+  }
+  
+  /* OPTIONAL: If you add icons later */
+  .sidebar-link svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  body[data-sidebar-open="false"] .sidebar {
+    transform: translateX(-100%);
+  }

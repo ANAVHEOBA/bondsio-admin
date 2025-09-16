@@ -1,0 +1,58 @@
+/* src/pages/LoginPage.css - complete replacement */
+
+.login-page {
+    padding: 3rem;
+    max-width: 400px;             /* Set a fixed width for better control */
+    margin: 0 auto;               /* Center the card */
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    text-align: center;           /* Center all content */
+  }
+  
+  .login-page h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2D2D2D;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  
+  .login-page-logo {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-page-logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+  
+  .login-error {
+    color: #D32F2F;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #ffe0e0;
+    border-radius: 8px;
+    border: 1px solid #f4b4b4;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 768px) {
+    .login-page {
+      padding: 2rem;
+      margin: 1rem;
+      max-width: 90%;
+    }
+    
+    .login-page h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+  }

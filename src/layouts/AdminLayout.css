@@ -1,0 +1,24 @@
+/* src/layouts/AdminLayout.css */
+
+.admin-layout {
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  /* Only apply padding when sidebar is open */
+  body[data-sidebar-open="true"] .admin-layout {
+    padding-left: 260px;
+  }
+  
+  body[data-sidebar-open="false"] .admin-layout {
+    padding-left: 0;
+  }
+  
+  /* Main content container */
+  .admin-main {
+    width: 100%;
+    padding: 2rem;
+    background-color: #f9f5f1;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }

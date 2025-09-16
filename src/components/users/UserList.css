@@ -1,0 +1,264 @@
+/* src/components/users/UserList.css */
+
+.user-list {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    width: 100%; /* ← Takes full width of container */
+    /* ❌ Removed: max-width: 1200px; */
+    /* ❌ Removed: margin: 0 auto; */
+  }
+  
+  .user-list-header h2 {
+    margin: 0 0 1rem 0;
+    color: #2d2d2d;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .user-list-loading,
+  .user-list-error {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    background: #fafafa;
+    border-radius: 12px;
+  }
+  
+  .user-list-error {
+    color: #d32f2f;
+    background: #ffe0e0;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  
+  .user-table th,
+  .user-table td {
+    padding: 0.75rem 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .user-table thead th {
+    background: #fafafa;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .user-table tbody tr:hover {
+    background: #f9f9f9;
+  }
+  
+  .col-avatar {
+    width: 60px;
+    text-align: center;
+  }
+  
+  .col-name {
+    min-width: 140px;
+  }
+  
+  .col-email {
+    min-width: 180px;
+  }
+  
+  .col-country {
+    min-width: 100px;
+  }
+  
+  .col-joined {
+    min-width: 110px;
+  }
+  
+  .col-status {
+    width: 100px;
+    text-align: center;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  .user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .user-avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #ff8c00;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .status-verified {
+    background: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .status-unverified {
+    background: #fff3e0;
+    color: #ef6c00;
+  }
+  
+  @media (max-width: 768px) {
+    .user-table {
+      font-size: 0.875rem;
+    }
+    .col-country,
+    .col-joined {
+      display: none;
+    }
+  }
+
+/* Add these styles to the end of src/components/users/UserList.css */
+
+.pagination-controls {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .pagination-info {
+    color: #555;
+    font-size: 0.9rem;
+  }
+  
+  .pagination-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .pagination-btn {
+    padding: 0.5rem 0.75rem;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+  
+  .pagination-btn:hover:not(:disabled) {
+    background-color: #e0e0e0;
+    border-color: #ccc;
+  }
+  
+  .pagination-btn:disabled {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+  }
+  
+  .pagination-btn.active {
+    background-color: #FF8C00;
+    color: white;
+    border-color: #FF8C00;
+  }
+  
+  @media (max-width: 768px) {
+    .pagination-buttons {
+      gap: 0.25rem;
+    }
+    
+    .pagination-btn {
+      padding: 0.4rem 0.6rem;
+      font-size: 0.8rem;
+    }
+  }
+
+/* Add these new column styles to src/components/users/UserList.css */
+
+.col-username {
+    min-width: 120px;
+  }
+  
+  .col-phone {
+    min-width: 120px;
+  }
+  
+  .col-dob {
+    min-width: 100px;
+  }
+  
+  .col-notifications {
+    width: 60px;
+    text-align: center;
+  }
+  
+  .col-device {
+    min-width: 100px;
+  }
+  
+  .notification-enabled {
+    color: #2e7d32;
+    font-weight: bold;
+  }
+  
+  .notification-disabled {
+    color: #d32f2f;
+  }
+  
+  /* Update responsive styles */
+  @media (max-width: 768px) {
+    .user-table {
+      font-size: 0.875rem;
+    }
+    
+    .col-country,
+    .col-joined,
+    .col-dob,
+    .col-phone,
+    .col-device {
+      display: none;
+    }
+    
+    .col-username {
+      min-width: 100px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .col-username,
+    .col-device {
+      display: none;
+    }
+    
+    .user-table {
+      font-size: 0.8rem;
+    }
+  }

@@ -1,0 +1,23 @@
+/* src/App.css - complete replacement */
+
+/* ---------- LOGIN-ONLY RULES ---------- */
+body[data-page="login"] {
+  display: flex;
+  align-items: center;          /* centre the card horizontally */
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f9f5f1;
+}
+
+body[data-page="login"] .App {
+  width: 100%;
+  max-width: 600px;             /* Increased from 400px to 600px */
+  margin: 0 auto;               /* Ensure it's centered */
+}
+
+/* ---------- EVERYTHING ELSE ---------- */
+.App {
+  min-height: 100vh;
+  background-color: #f9f5f1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
