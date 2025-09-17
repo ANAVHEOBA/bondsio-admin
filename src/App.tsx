@@ -1,10 +1,10 @@
-// src/App.tsx
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import './App.css';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
 import UsersPage from './pages/UsersPage';
+import UserProfilePage from './pages/UserProfilePage'; // Add this import
 
 export default function App() {
   const location = useLocation();
@@ -28,7 +28,7 @@ export default function App() {
         <Route path="/" element={<LoginPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/users" element={<UsersPage />} />
-        {/* more admin routes here */}
+        <Route path="/users/:userId" element={<UserProfilePage />} /> {/* Add this route */}
       </Routes>
     </div>
   );

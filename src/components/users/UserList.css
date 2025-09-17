@@ -258,3 +258,14 @@
     font-size: 0.8rem;
   }
 }
+
+
+.user-profile-link {
+  color: #ff8c00;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.user-profile-link:hover {
+  text-decoration: underline;
+}

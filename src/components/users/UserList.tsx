@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; // Add this import
 import { getUsers } from '../../api/getuser/api';
 import type { GetUserResponse, User, Pagination } from '../../api/getuser/types';
 import './UserList.css';
@@ -83,7 +84,11 @@ export default function UserList() {
                     )}
                   </div>
                 </td>
-                <td className="col-name">{u.full_name || 'Unnamed User'}</td>
+                <td className="col-name">
+                  <Link to={`/users/${u.id}`} className="user-profile-link">
+                    {u.full_name || 'Unnamed User'}
+                  </Link>
+                </td>
                 <td className="col-username">{u.user_name || '—'}</td>
                 <td className="col-email">{u.email}</td>
                 <td className="col-phone">{u.phone || '—'}</td>
