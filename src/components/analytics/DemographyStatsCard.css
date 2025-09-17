@@ -1,0 +1,236 @@
+/* src/components/analytics/DemographyStatsCard.css */
+
+.demography-stats-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .demography-stats-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #4b5563;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  
+  .card-header .total-users-badge {
+    margin-left: auto;
+    background: #fef3c7;
+    color: #92400e;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .demographics-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .demographic-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4b5563;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .demographic-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .demographic-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .item-label {
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-weight: 500;
+  }
+  
+  .item-bar-container {
+    height: 6px;
+    background: #f3f4f6;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  
+  .item-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #f59e0b, #f97316);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+  }
+  
+  .item-count {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-top: 0.125rem;
+  }
+  
+  .item-count .count {
+    font-weight: 600;
+    color: #1f2937;
+  }
+  
+  .item-count .percentage {
+    font-weight: 500;
+  }
+  
+  .card-footer {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    text-align: right;
+    margin-top: 0.5rem;
+  }
+  
+  /* Error State */
+  .demography-stats-card.error {
+    background: #fef2f2;
+    border-color: #fecaca;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .demography-stats-card.error .error-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: #b91c1c;
+  }
+  
+  /* Skeleton Loading */
+  .demography-stats-card.skeleton .card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .demography-stats-card.skeleton .icon-placeholder,
+  .demography-stats-card.skeleton .title-placeholder {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 4px;
+  }
+  
+  .icon-placeholder {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .title-placeholder {
+    width: 140px;
+    height: 16px;
+  }
+  
+  .demographics-sections .demographic-section .section-header-placeholder {
+    width: 100px;
+    height: 14px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .items-placeholder {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .item-placeholder {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .label-placeholder,
+  .bar-placeholder,
+  .count-placeholder {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 4px;
+  }
+  
+  .label-placeholder {
+    width: 80px;
+    height: 12px;
+  }
+  
+  .bar-placeholder {
+    width: 100%;
+    height: 6px;
+    margin: 0.25rem 0;
+  }
+  
+  .count-placeholder {
+    width: 60px;
+    height: 12px;
+    align-self: flex-end;
+  }
+  
+  @keyframes loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .demography-stats-card {
+      padding: 1rem;
+    }
+    
+    .card-header {
+      font-size: 0.9rem;
+    }
+    
+    .section-header {
+      font-size: 0.85rem;
+    }
+    
+    .item-label {
+      font-size: 0.8rem;
+    }
+    
+    .item-count {
+      font-size: 0.75rem;
+    }
+  }

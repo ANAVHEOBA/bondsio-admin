@@ -1,0 +1,53 @@
+/* src/components/analytics/TotalUsersCard.css */
+
+.total-users-card {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .total-users-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .total-users-card h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0 0 0.5rem 0;
+    opacity: 0.9;
+  }
+  
+  .total-users-card .total-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  .total-users-card.loading,
+  .total-users-card.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+  }
+  
+  .total-users-card.loading p,
+  .total-users-card.error p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .total-users-card.error {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  }

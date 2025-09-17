@@ -1,4 +1,3 @@
-// src/components/users/UserList.tsx
 import { useEffect, useState } from 'react';
 import { getUsers } from '../../api/getuser/api';
 import type { GetUserResponse, User, Pagination } from '../../api/getuser/types';
@@ -88,7 +87,7 @@ export default function UserList() {
                 <td className="col-username">{u.user_name || '—'}</td>
                 <td className="col-email">{u.email}</td>
                 <td className="col-phone">{u.phone || '—'}</td>
-                <td className="col-country">{u.country_id ? `ID ${u.country_id}` : '—'}</td>
+                <td className="col-country">{u.country?.name || '—'}</td>
                 <td className="col-dob">{u.dob || '—'}</td>
                 <td className="col-joined">{new Date(u.created_at).toLocaleDateString()}</td>
                 <td className="col-status">
