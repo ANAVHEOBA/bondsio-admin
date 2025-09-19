@@ -4,19 +4,18 @@ import './App.css';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
 import UsersPage from './pages/UsersPage';
-import UserProfilePage from './pages/UserProfilePage'; // Add this import
+import UserProfilePage from './pages/UserProfilePage';
+import ReportedBondsPage from './pages/ReportedBondsPage';
+import BondReportsPage from './pages/BondReportsPage';
 
 export default function App() {
   const location = useLocation();
 
   useEffect(() => {
-    // tag <body> so CSS can scope login-only rules
     document.body.setAttribute(
       'data-page',
       location.pathname === '/' ? 'login' : 'admin'
     );
-    
-    // Initialize sidebar state for admin pages
     if (location.pathname !== '/') {
       document.body.setAttribute('data-sidebar-open', 'true');
     }
@@ -28,7 +27,11 @@ export default function App() {
         <Route path="/" element={<LoginPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/users" element={<UsersPage />} />
-        <Route path="/users/:userId" element={<UserProfilePage />} /> {/* Add this route */}
+        <Route path="/users/:userId" element={<UserProfilePage />} />
+        {/* ✅ This renders the LIST of reported bonds */}
+        <Route path="/reports/bonds" element={<ReportedBondsPage />} />
+        {/* ✅ This renders DETAILS for a single bond */}
+        <Route path="/reports/bonds/:bondId" element={<BondReportsPage />} />
       </Routes>
     </div>
   );

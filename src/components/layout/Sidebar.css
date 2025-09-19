@@ -130,3 +130,72 @@
   body[data-sidebar-open="false"] .sidebar {
     transform: translateX(-100%);
   }
+
+
+
+  /* ---------- toggle button ---------- */
+.sidebar-toggle-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* ---------- reports collapsible ---------- */
+.reports-trigger {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+.reports-trigger:hover {
+  background-color: #FF8C00;
+  color: white;
+}
+
+.reports-trigger .chevron {
+  margin-left: auto;
+  transition: transform 0.25s ease;
+}
+
+.reports-trigger.open .chevron {
+  transform: rotate(90deg);
+}
+
+/* ---------- nested list ---------- */
+.sidebar-sub {
+  margin: 0.25rem 0 0.5rem 1.5rem;
+  border-left: 2px solid #4a4a4a;
+  padding-left: 0.75rem;
+}
+
+.sidebar-sub .sidebar-link {
+  font-size: 0.875rem;
+  padding: 0.6rem 0.8rem;
+}
+
+.sidebar-nav {
+  flex: 1 1 auto;          /* take all free space */
+  overflow-y: auto;        /* scroll when content is tall */
+  min-height: 0;           /* fix flexbox min-height bug */
+  padding-right: 4px;      /* tiny gap so scrollbar doesn't sit on text */
+}
+
+.sidebar-sub {
+  margin: 0.25rem 0 0.5rem 1.5rem;
+  border-left: 2px solid #4a4a4a;
+  padding-left: 0.75rem;
+}

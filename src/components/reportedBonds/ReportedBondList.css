@@ -1,0 +1,54 @@
+.bond-list-wrapper {
+    padding: 1rem;
+  }
+  
+  .bond-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+  }
+  
+  .bond-table th,
+  .bond-table td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #444;
+    text-align: left;
+    vertical-align: middle;
+  }
+  
+  .bond-table th {
+    background-color: #3a3a3a;
+    color: #ff8c00;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .bond-list-info {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  .bond-list-info.error {
+    color: #ff4d4d;
+    background-color: #333;
+    border-radius: 6px;
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .clickable-row:hover {
+    background-color: #444;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Accessibility: Ensure focus styles for keyboard users */
+  .clickable-row a:focus {
+    outline: 2px solid #ff8c00;
+    outline-offset: 2px;
+  }

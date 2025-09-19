@@ -1,0 +1,59 @@
+.bond-reports-page {
+    padding: 1.5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .page-title {
+    margin: 0 0 1.5rem;
+    font-size: 1.75rem;
+    color: #ff8c00;
+    font-weight: 600;
+  }
+  
+  .bond-reports-error {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #d32f2f;
+    background: #ffe0e0;
+    border: 1px solid #ffcdd2;
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 600px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bond-reports-error h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+  }
+  
+  /* Back Link Button */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: #3a3a3a;
+    color: #ff8c00;
+    text-decoration: none;
+    border: 1px solid #ff8c00;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+  }
+  
+  .back-link:hover,
+  .back-link:focus {
+    background-color: #444;
+    color: #ffb74d;
+    box-shadow: 0 0 0 2px #ff8c0040;
+    outline: none;
+  }
+  
+  .back-link:active {
+    transform: scale(0.98);
+  }
