@@ -7,6 +7,9 @@ import UsersPage from './pages/UsersPage';
 import UserProfilePage from './pages/UserProfilePage';
 import ReportedBondsPage from './pages/ReportedBondsPage';
 import BondReportsPage from './pages/BondReportsPage';
+import ActivityPage from './pages/ActivityPage';
+import ActivityDetailPage from './pages/ActivityDetailPage';
+import ReportedActivitiesPage from './pages/ReportedActivitiesPage';
 
 export default function App() {
   const location = useLocation();
@@ -32,6 +35,9 @@ export default function App() {
         <Route path="/reports/bonds" element={<ReportedBondsPage />} />
         {/* ✅ This renders DETAILS for a single bond */}
         <Route path="/reports/bonds/:bondId" element={<BondReportsPage />} />
+        <Route path="/reports/activities" element={<ReportedActivitiesPage />} />
+        <Route path="/activity" element={<ActivityPage />} /> 
+        <Route path="/activity/:id" element={<ActivityDetailPage />} />
       </Routes>
     </div>
   );

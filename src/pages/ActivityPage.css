@@ -1,0 +1,45 @@
+/* src/pages/ActivityPage.css */
+
+.activity-page {
+    padding: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .activity-page h1 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+  }
+  
+  .activity-section {
+    margin-bottom: 3rem;
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    margin: 3rem 0 2rem;
+    color: #666;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  
+  .divider hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+  
+  .divider span {
+    padding: 0 1rem;
+    background: white;
+  }
+  
+  .trending-section {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #eee;
+  }

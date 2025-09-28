@@ -1,0 +1,13 @@
+/* src/pages/ActivityDetailPage.css */
+
+.activity-detail-page {
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  /* Optional: add spacing between child elements */
+  .activity-detail-page > * {
+    margin-bottom: 1.5rem;
+  }

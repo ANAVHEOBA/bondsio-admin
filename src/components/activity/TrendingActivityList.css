@@ -1,0 +1,97 @@
+.trending-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .trending-loading,
+  .trending-error {
+    padding: 2rem;
+    text-align: center;
+    color: #666;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+  }
+  
+  .trending-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+  
+  .trending-table th,
+  .trending-table td {
+    padding: 0.75rem 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .trending-table th {
+    background: #fafafa;
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap;
+  }
+  
+  /* Column widths */
+  .col-title { min-width: 200px; }
+  .col-location { min-width: 120px; }
+  .col-start { min-width: 160px; }
+  .col-likes { min-width: 80px; }
+  .col-participants { min-width: 120px; }
+  .col-visibility { min-width: 100px; }
+  .col-interests { min-width: 150px; }
+  .col-creator { min-width: 140px; }
+  
+  .visibility-badge {
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .visibility-badge.public {
+    background: #e6f7ff;
+    color: #0050b3;
+  }
+  
+  .visibility-badge.private {
+    background: #fff1f0;
+    color: #cf1322;
+  }
+  
+  .pagination-controls {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pagination-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .pagination-btn {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .pagination-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  
+  .pagination-btn.active {
+    background: #ff8c00;
+    color: #fff;
+    border-color: #ff8c00;
+  }

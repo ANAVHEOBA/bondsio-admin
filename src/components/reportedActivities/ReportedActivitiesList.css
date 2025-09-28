@@ -1,0 +1,150 @@
+.reported-activities-list {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.reports-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.table-wrapper {
+  margin-top: 1.5rem;
+}
+
+.reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.reports-table th,
+.reports-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.reports-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+/* 💥 NUCLEAR OPTION — FORCE NO HOVER BACKGROUND */
+.reports-table tbody tr:hover {
+  background-color: transparent !important;
+  cursor: default;
+}
+
+.col-id,
+.col-activity {
+  width: 80px;
+}
+
+.col-reporter {
+  width: 180px;
+}
+
+.col-reason {
+  width: 140px;
+}
+
+.col-description {
+  min-width: 250px;
+  color: #555;
+}
+
+.col-status {
+  width: 140px;
+}
+
+.col-created {
+  width: 180px;
+}
+
+.col-actions {
+  width: 120px;
+}
+
+.reason-badge {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  background-color: #fff3cd;
+  color: #856404;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #ffeaa7;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+  text-transform: capitalize;
+}
+
+.status-pending {
+  background-color: #ffc107;
+  border: 1px solid #e0a800;
+}
+
+.status-reviewed {
+  background-color: #17a2b8;
+  border: 1px solid #138496;
+}
+
+.status-resolved {
+  background-color: #28a745;
+  border: 1px solid #218838;
+}
+
+.status-dismissed {
+  background-color: #dc3545;
+  border: 1px solid #c82333;
+}
+
+.action-btn {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s;
+}
+
+.review-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.review-btn:hover {
+  background-color: #0069d9;
+}
+
+.reports-loading,
+.reports-error {
+  text-align: center;
+  padding: 4rem;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.reports-error {
+  color: #dc3545;
+}

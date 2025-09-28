@@ -41,6 +41,7 @@ export default function Sidebar() {
           <li><NavLink to="/users" ico="👥">Users</NavLink></li>
           <li><NavLink to="/communities" ico="🌐">Communities</NavLink></li>
           <li><NavLink to="/content" ico="📝">Content</NavLink></li>
+          <li><NavLink to="/activity" ico="🔔">Activity</NavLink></li>
           <li><NavLink to="/analytics" ico="📈">Analytics</NavLink></li>
 
           {/* ----- Reports (collapsible) ----- */}
